@@ -1,0 +1,493 @@
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --step--2: clamp(0.81rem, calc(0.59rem + 0.1vw), 0.96rem);
+  --step--1: clamp(1.09rem, calc(1.05rem + 0.21vw), 1.2rem);
+  --step-0: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.5rem);
+  --step-1: clamp(1.58rem, calc(1.46rem + 0.59vw), 1.88rem);
+  --step-2: clamp(1.89rem, calc(1.71rem + 0.89vw), 2.34rem);
+  --step-3: clamp(2.27rem, calc(2.01rem + 1.29vw), 2.93rem);
+  --step-4: clamp(2.72rem, calc(2.36rem + 1.83vw), 3.66rem);
+  --step-5: clamp(1.27rem, calc(1.75rem + 2.56vw), 4.58rem);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: #222;
+}
+
+:root {
+  --light: #ff771b;
+  --dark: #3a3a50;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-weight: bold;
+  color: grey;
+}
+
+@keyframes staggeredUp {
+  0% {
+    top: 5rem;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+nav {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  font-size: var(--step-2);
+  font-weight: unset;
+  color: var(--light);
+}
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: #222;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  animation: staggeredUp 1s 0.5s ease both;
+}
+
+.hero-text {
+  margin: 2rem 0;
+}
+
+.hero-text h1 {
+  margin: 1rem 0;
+  font-size: var(--step-5);
+  text-align: left;
+}
+
+.hero-text p {
+  font-size: var(--step--2);
+  line-height: 1.5;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.form-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-hero input {
+  border: solid thin var(--light);
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+}
+
+.form-hero input::placeholder {
+  color: var(--light);
+  opacity: 0.5;
+}
+
+.btn {
+  width: 100%;
+  font-size: var(--step--);
+  padding: 0.4rem 3rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: var(--light);
+  color: whitesmoke;
+  transition: transform 0.1s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.img {
+  animation: fadeIn 0.5s 1.4s ease both;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding: 0.9rem;
+  margin: 1rem;
+}
+
+.section p {
+  line-height: 1.9;
+  margin: 1.5rem 0;
+}
+
+.bg-color {
+  background-color: #0001;
+  border: thin solid #0002;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 3rem .5rem;
+  font-size: var(--step-1);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.card {
+  width: 280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  transition: transform 0.3s ease;
+  margin: 0.5rem;
+}
+
+.card p {
+  font-weight: unset;
+  margin: 0.5rem;
+  line-height: 1.8;
+}
+
+.card:hover {
+  transform: scale(102%);
+}
+
+.bg-color-orange {
+  background-color: var(--light);
+  color: whitesmoke;
+}
+.bg-color-orange p {
+  color: whitesmoke;
+}
+
+.bg-color-blue {
+  background-color: #2545df20;
+}
+
+.bg-color-green {
+  background-color: #e9f0ff;
+}
+
+hr {
+  margin: 2rem 5rem;
+}
+
+.number {
+  font-size: 5rem;
+  color: #525ffb;
+  text-align: center;
+  margin: 4rem;
+}
+
+.pre-footer {
+  position: relative;
+}
+
+.user {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.user img {
+  width: 40px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid thin var(--dark);
+}
+
+.user:nth-child(2) {
+  left: 5%;
+  top: 3rem;
+}
+.user:nth-child(3) {
+  left: 80%;
+  bottom: 2.3rem;
+}
+.user:nth-child(4) {
+  left: 14%;
+  bottom: -3.5rem;
+}
+.user:nth-child(5) {
+  left: 68%;
+  bottom: -3rem;
+}
+.user:nth-child(6) {
+  left: 75%;
+  top: 4.3rem;
+}
+.user:nth-child(7) {
+  left: 2%;
+  top: 7rem;
+}
+
+footer {
+  background-color: var(--dark);
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 1rem;
+}
+
+footer p {
+  font-size: var(--step-2);
+  text-align: center;
+  margin: 2rem;
+  font-weight: unset;
+}
+
+footer form input,
+footer form button {
+  width: 100%;
+  height: 2rem;
+  padding: 0 1rem;
+  margin: 0.5rem;
+}
+
+footer .subtitle {
+  font-size: var(--step-5);
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-text {
+  margin: 1rem 0;
+  text-align: center;
+  color: grey;
+}
+
+.nav-search {
+  background-color: #fff3;
+  display: inline;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-search::placeholder {
+  color: #fff5;
+}
+
+@media screen and (min-width: 600px) {
+  .hero-section {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    font-size: 120%;
+    padding: 0 5% 5rem 5%;
+    height: 90vh;
+  }
+
+  .hero-text h1 {
+    line-height: 1;
+    padding: 1rem 0;
+  }
+
+  .hero-text p {
+    line-height: 2;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  .hero-section .img img {
+    max-width: 500px;
+  }
+
+  .btn {
+    width: auto;
+  }
+
+  .form-hero {
+    flex-direction: row;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0 5%;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    min-width: 600px;
+    height: auto;
+  }
+
+  .section h3 {
+    line-height: 1;
+    margin: 2rem 0;
+  }
+
+  .section .img img {
+    min-width: 300px;
+    max-width: 400px;
+  }
+
+  .card-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+  .flex-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .user:nth-child(2) {
+    left: 25%;
+    top: 3rem;
+  }
+  .user:nth-child(7) {
+    left: 12%;
+    top: 7rem;
+  }
+  .user:nth-child(4) {
+    left: 28%;
+    bottom: -3.5rem;
+  }
+  .user:nth-child(6) {
+    left: 80%;
+    top: 4.3rem;
+  }
+  .user:nth-child(3) {
+    left: 70%;
+    bottom: 2.3rem;
+  }
+  .user:nth-child(5) {
+    left: 58%;
+    bottom: -4rem;
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer div {
+    width: 70%;
+  }
+
+  footer form {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: whitesmoke;
+  }
+
+  .card-container {
+    flex-direction: row;
+    gap: none;
+  }
+}
+
+/*@media screen and (max-width: 1040px) {*/
+/*.section {*/
+/*flex-direction: column-reverse;*/
+/*}*/
+/*}*/
+
+@media screen and (max-width: 930px) {
+  .hero-section {
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+  }
+
+  .section {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .section .btn {
+    width: 100%;
+  }
+  .section p,
+  .section h3 {
+    text-align: center;
+  }
+
+  .hero-section img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
